@@ -1,4 +1,5 @@
 public class Book {
+    private String sku;
     private String title;
     private String author;
     private String description;
@@ -6,16 +7,24 @@ public class Book {
     private boolean isInStock;
 
     public Book(){}
-    public Book(String t, String a, String d, double p, boolean in ){
-        this.title = t;
-        this.author = a;
-        this.description = d;
-        this.price = p;
-        this.isInStock = in;
+    public Book(String sku, String title, String author, String descrip, double price, boolean inStock ){
+        this.sku = sku;
+        this.title = title;
+        this.author = author;
+        this.description = descrip;
+        this.price = price;
+        this.isInStock = inStock;
     }
     public String getDisplayText(){
-        return "Author: "+ this.getAuthor() + "\nTitle: "+ this.getTitle()
+        return "\nSKU: "+this.getSku()+"\nAuthor: "+ this.getAuthor() + "\nTitle: "+ this.getTitle()
         + "\nDescription: "+ this.getDescription();
+    }
+
+    public String getSku(){
+        return sku;
+    }
+    public void setSku(String sku){
+        this.sku = sku;
     }
 
     public String getTitle() {
