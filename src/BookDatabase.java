@@ -12,6 +12,17 @@ public class BookDatabase {
         books.add(new Book("Core Java", "Hortsman, Cary", "Textbook", 40.95, true));
         books.add(new Book("Who Fears Death", "Okorafor, Nnedi", "SciFi", 15.35, true));
     }
+    public int getInStock(){
+        int count = 0;
+        for(int i=0; i<books.size(); i++){
+            book = books.get(i);
+            if (book.isInStock() ){
+                count ++;
+            }
+        }
+        return count;
+    }
+
     public int getLength(){
         return books.size();
     }

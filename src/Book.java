@@ -57,4 +57,5 @@ public class Book {
     public void setInStock(boolean inStock) {
         isInStock = inStock;
     }
+
 }
